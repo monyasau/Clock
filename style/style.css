@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: "Rubik";
+    src: url("./font/Rubik.ttf") format('truetype');
+   }
 /* general styling */
 * {
-    transition: ease-in 0.3s;
+    transition: ease-in 0.5s;
 }
 body{
     font-family: "Rubik", Arial;
@@ -12,6 +14,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
 }
 
 .seconds{
@@ -22,13 +26,14 @@ body{
 .clock {
     display: grid;
     gap: 1em;
+    width: 90vw;
 }
 .container {
     background-color: #1A1A1A;
     border-radius: 25px;
     text-align: center;
     font-size: 6em;
-    padding: 3rem 6rem;
+    padding: 4rem 3rem;
 
 }
 
@@ -43,14 +48,36 @@ body{
 
 
 
+/* tablet styling */
+
+@media only screen and (min-width: 500px) {
+    body {
+        padding: 2em;
+    }
+    .clock {
+
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap: 1em;
+    }
+
+    .container {
+        border-radius: 25px;
+        text-align: center;
+        font-size: 10em;
+        /* padding: 3rem 6rem; */
+    
+    }
+    
+
+}
 
 
+/* desktop styling */
 
-
-
-
-
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1280px) {
+    body {
+        padding: 5rem;
+    }
 
 .clock {
     display: grid;
