@@ -4,7 +4,8 @@
    }
 /* general styling */
 * {
-    transition: ease-in 0.5s;
+    user-select: none;
+    transition:  ease-in 0.5s;
 }
 body{
     font-family: "Rubik", Arial;
