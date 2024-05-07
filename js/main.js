@@ -37,7 +37,7 @@ let minutesTab = document.getElementById("minutes");
 
 const updateTabs=(hour,minutes)=>{
   (hour>12)?hoursTab.innerText=hour-12:hoursTab.innerText;
-  minutesTab.innerText=minutes;
+  (minutes<10)?minutesTab.innerText="0"+minutes:minutesTab.innerText=minutes;
 
 }
 
@@ -46,4 +46,6 @@ let dateTime =  new Date();
   updateTabs(dateTime.getHours(), dateTime.getMinutes());
 
 }
+
+updateTime();
 setInterval(()=>{updateTime()},1000)
