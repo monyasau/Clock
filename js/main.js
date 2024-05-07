@@ -36,8 +36,8 @@ let hoursTab = document.getElementById("hours");
 let minutesTab = document.getElementById("minutes");
 
 const updateTabs=(hour,minutes)=>{
-  (hour>12)?hoursTab.innerText=hour-12:hoursTab.innerText;
-  (minutes<10)?minutesTab.innerText="0"+minutes:minutesTab.innerText=minutes;
+  (hour>12)?hoursTab.innerHTML=hour-12:hoursTab.innerHTML;
+  (minutes<10)?minutesTab.innerHTML="0"+minutes:minutesTab.innerHTML=minutes;
 
 }
 
