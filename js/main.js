@@ -32,4 +32,18 @@ const requestWakeLock = async () => {
 })();
 
 
-const updateTime=()=>{}
+let hoursTab = document.getElementById("hours");
+let minutesTab = document.getElementById("minutes");
+
+const updateTabs=(hour,minutes)=>{
+  (hour>12)?hoursTab.innerText=hour-12:hoursTab.innerText;
+  minutesTab.innerText=minutes;
+
+}
+
+const updateTime=()=>{
+let dateTime =  new Date();
+  updateTabs(dateTime.getHours(), dateTime.getMinutes());
+
+}
+setInterval(()=>{updateTime()},1000)
