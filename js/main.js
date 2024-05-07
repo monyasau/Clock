@@ -30,3 +30,6 @@ const requestWakeLock = async () => {
 (async () => {
   await requestWakeLock();
 })();
+
+
+const updateTime=()=>{}
