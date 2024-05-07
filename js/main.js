@@ -16,4 +16,3 @@ const toggleFullScreen = () => {
 document.addEventListener("dblclick", () => {
   toggleFullScreen();
 });
-})();
