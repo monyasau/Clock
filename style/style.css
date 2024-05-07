@@ -15,6 +15,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
     
 }
@@ -23,6 +24,9 @@ body{
     position: relative;
 }
 
+span{
+    font-size: smaller;
+}
 /* mobile-styling */
 .clock {
     display: grid;
